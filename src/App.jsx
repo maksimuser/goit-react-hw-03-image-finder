@@ -15,7 +15,7 @@ class App extends Component {
     isLoading: false,
     error: null,
     // showModal: false,
-    selectImage: '',
+    selectImage: {},
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -79,11 +79,7 @@ class App extends Component {
 
         {error && <p>Whoops, something went wrong: {error.message}</p>}
         <SearchBar onSubmit={this.handleChangeQuery} />
-        <ImageGallery
-          hits={hits}
-          onToggleModal={this.toggleModal}
-          onClickImage={this.handleClickImage}
-        />
+        <ImageGallery hits={hits} onToggleModal={this.toggleModal} />
 
         {isLoading && (
           <div className="Loader">
