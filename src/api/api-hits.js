@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '21016038-c4a85434ef4684dfcad661ac9';
+import API_KEY from './key';
 
 const fetchHits = ({ searchQuery = '', currentPage = 1 }) => {
   return axios
